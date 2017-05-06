@@ -7,14 +7,16 @@ import { Recipe } from '../recipe';
 })
 export class RecipeListComponent implements OnInit {
   recipes: Array<Recipe>=[];
-  recipe:Recipe = new Recipe('men','menStyle','../assets/images/style.js');
-  @Output() recipeSelected: EventEmitter<Recipe>;
 
+  recipe:Recipe = new Recipe('men','menStyle','images/shokry.jpg');
+
+  //@Output() recipeSelected: EventEmitter<Recipe>;
+  @Output() recipeSelected = new  EventEmitter<Recipe>();
 
 
 
   constructor() {
-    this.recipeSelected = new EventEmitter();
+   // this.recipeSelected = new EventEmitter();
   }
 
   ngOnInit() {
