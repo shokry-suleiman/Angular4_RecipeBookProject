@@ -14,6 +14,7 @@ import { ShoppingListAddComponent } from './shopping-list-add/shopping-list-add.
 import { DropdownDirective } from './directives/dropdown.directive';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
