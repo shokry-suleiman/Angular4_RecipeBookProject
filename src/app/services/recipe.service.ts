@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Recipe } from '../recipe';
+
 @Injectable()
+
 export class RecipeService {
 
   private  recipes: Array<Recipe> = [
@@ -10,7 +12,13 @@ export class RecipeService {
   ];
 
   constructor() { }
+
 getRecipe(){
     return this.recipes;
 }
+
 }
+
+export const RECIPE_SERVICE: Array<any> = [
+  { provide:RecipeService, useClass: RecipeService}
+];

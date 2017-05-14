@@ -12,6 +12,8 @@ import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListAddComponent } from './shopping-list-add/shopping-list-add.component';
 import { DropdownDirective } from './directives/dropdown.directive';
+import {RECIPE_SERVICE} from "./services/recipe.service";
+import {SHOPPING_LIST} from "./services/shopping-list.service";
 
 
 
@@ -32,7 +34,8 @@ import { DropdownDirective } from './directives/dropdown.directive';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ RECIPE_SERVICE,
+  SHOPPING_LIST],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
