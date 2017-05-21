@@ -7,11 +7,11 @@ import {Ingredient} from "../classes/ingredient";
 export class RecipeService {
 
   private  recipes: Array<Recipe> = [
-    new Recipe('men','menStyle','images/shokry.jpg',[
+    new Recipe('Tasty Schnitzel','A super-tasty Schnitzel - just awesome!','https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG',[
       new Ingredient('French Fries',2),
       new Ingredient('Pork Meat', 1)
     ]),
-    new Recipe('summaryStyle','menStyle','images/shokry.jpg',[])
+    new Recipe('Big Fat Burger','What else you need to say?','https://upload.wikimedia.org/wikipedia/commons/b/be/Burger_King_Angus_Bacon_%26_Cheese_Steak_Burger.jpg',[])
 
   ];
 
