@@ -14,6 +14,7 @@ import { ShoppingListAddComponent } from './shopping-list-add/shopping-list-add.
 import { DropdownDirective } from './directives/dropdown.directive';
 import {RECIPE_SERVICE} from "./services/recipe.service";
 import {SHOPPING_LIST} from "./services/shopping-list.service";
+import {AppRoutingModule} from "./app-routing.module";
 
 
 
@@ -32,7 +33,8 @@ import {SHOPPING_LIST} from "./services/shopping-list.service";
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [ RECIPE_SERVICE,
   SHOPPING_LIST],
