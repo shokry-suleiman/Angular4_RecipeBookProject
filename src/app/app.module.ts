@@ -15,6 +15,7 @@ import { DropdownDirective } from './directives/dropdown.directive';
 import {RECIPE_SERVICE} from "./services/recipe.service";
 import {SHOPPING_LIST} from "./services/shopping-list.service";
 import {AppRoutingModule} from "./app-routing.module";
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 
 
 
@@ -28,7 +29,8 @@ import {AppRoutingModule} from "./app-routing.module";
     RecipeDetailComponent,
     ShoppingListComponent,
     ShoppingListAddComponent,
-    DropdownDirective
+    DropdownDirective,
+    RecipeStartComponent
   ],
   imports: [
     BrowserModule,
