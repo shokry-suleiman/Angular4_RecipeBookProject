@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgForm} from "@angular/forms";
+import {ShoppingListService} from "../services/shopping-list.service";
+import {Ingredient} from "../classes/ingredient";
 
 @Component({
   selector: 'app-shopping-list-add',
@@ -8,14 +10,15 @@ import {NgForm} from "@angular/forms";
 })
 export class ShoppingListAddComponent implements OnInit {
 
-  constructor() { }
+  constructor( private  sls:ShoppingListService) { }
 
   ngOnInit() {
   }
+  //recieving value of NgForm type from the view template
 
   onSubmit( form: NgForm) {
       const value = form.value;
-
-
+      const ingredient= new Ingredient(value.name, value.amount);
+      this.sls.addItem(ingredient);
   }
 }

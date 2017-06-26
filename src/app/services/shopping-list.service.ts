@@ -12,6 +12,11 @@ export class ShoppingListService {
   addItems(items: Array<Ingredient>){
     Array.prototype.push.apply(this.items, items);
   }
+
+  addItem(item: Ingredient){
+    Array.prototype.push.apply(this.items, item);
+
+  }
 }
 
 export const SHOPPING_LIST: Array<any> = [
