@@ -1,21 +1,33 @@
 import { Injectable } from '@angular/core';
 import {Ingredient} from "../classes/ingredient";
+import {Subject} from "rxjs";
 
 @Injectable()
 export class ShoppingListService {
-   private items: Array<Ingredient> = [];
+  ingredientChanged = new Subject< Ingredient[]>();
+   private items: Array<Ingredient> = [
+     new Ingredient('Apple', 10),
+     new Ingredient('Tomatomes', 20)
+   ];
   constructor() { }
+
+
   getItems() {
     return this.items;
   }
 
+  getItem(index: number) {
+    return this.items[index]
+  }
+
   addItems(items: Array<Ingredient>){
-    Array.prototype.push.apply(this.items, items);
+    this.items.push(...items);
+    this.ingredientChanged.next(this.items.slice());
   }
 
   addItem(item: Ingredient){
-    Array.prototype.push.apply(this.items, item);
-
+      this.items.push(item);
+      this.ingredientChanged.next(this.items.slice());
   }
 }
 
