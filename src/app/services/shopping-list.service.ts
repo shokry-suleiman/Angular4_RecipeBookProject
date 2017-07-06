@@ -6,6 +6,8 @@ import {isNumber} from "util";
 @Injectable()
 export class ShoppingListService {
   ingredientChanged = new Subject< Ingredient[]>();
+  // creating Subject which is an observable with intial value
+  //array for saving asyncronous data
   startingEditing = new  Subject<number>();
    private items: Array<Ingredient> = [
      new Ingredient('Apple', 10),
