@@ -44,7 +44,13 @@ export class ShoppingListAddComponent implements OnInit, OnDestroy {
   onSubmit( form: NgForm) {
       const value = form.value;
       const ingredient= new Ingredient(value.name, value.amount);
-      this.sls.addItem(ingredient);
+
+      if( this.editedMode ){
+        this.sls.updateIngredient(this.editedItem, ingredient);
+      }else {
+        this.sls.addItem(ingredient);
+      }
+      
   }
   ngOnDestroy() {
     this.subscription.unsubscribe();
