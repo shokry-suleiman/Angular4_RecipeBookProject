@@ -15,4 +15,8 @@ export class ShoppingListComponent implements OnInit {
     this.items = this.sls.getItems();
   }
 
+  onEdit(indexe: number) {
+  this.sls.startingEditing.next(indexe);
+  }
+
 }

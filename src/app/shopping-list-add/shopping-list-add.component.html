@@ -9,12 +9,14 @@
 
         <div class="col-sm-2 form-group">
           <label for="item-amount">Amount</label>
-          <input type="text" id="item-amount" required class="form-control" name="amount"ngModel>
+          <input type="text" id="item-amount" required class="form-control" name="amount" ngModel
+                 [pattern]="'^[1-9]+[0-9]*$'">
+          <!-- This Pattern For Validation To Prevent Negative And Zeros-->
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <button class="btn btn-success" type="submit">Add</button>
+          <button class="btn btn-success" type="submit" [disabled]="!f.valid" >Add</button>
           <button class="btn btn-danger" type="button">Delete Item</button>
           <button class="btn btn-primary" type="button">Clear</button>
         </div>

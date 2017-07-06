@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import {Ingredient} from "../classes/ingredient";
 import {Subject} from "rxjs";
+import {isNumber} from "util";
 
 @Injectable()
 export class ShoppingListService {
   ingredientChanged = new Subject< Ingredient[]>();
+  startingEditing = new  Subject<number>();
    private items: Array<Ingredient> = [
      new Ingredient('Apple', 10),
      new Ingredient('Tomatomes', 20)
