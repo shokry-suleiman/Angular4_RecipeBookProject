@@ -53,8 +53,19 @@ export class ShoppingListAddComponent implements OnInit, OnDestroy {
       }
 
       this.editedMode = false;
+      form.reset();
+  }
 
-      //form.reset();
+  onClear() {
+
+    this.slsForm.reset();
+    this.editedMode = false;
+  }
+
+  onDelete() {
+
+    this.sls.deleteIngredient(this.editedItem);
+    this.onClear();
   }
   ngOnDestroy() {
     this.subscription.unsubscribe();

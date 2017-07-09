@@ -46,6 +46,12 @@ export class ShoppingListService {
     //sending new item to observable
     this.ingredientChanged.next(this.items.slice());
   }
+
+  deleteIngredient(index: number){
+    this.items.splice(index, 1);
+    this.ingredientChanged.next(this.items.slice());
+
+  }
 }
 export const SHOPPING_LIST: Array<any> = [
   { provide: ShoppingListService, useClass: ShoppingListService}
