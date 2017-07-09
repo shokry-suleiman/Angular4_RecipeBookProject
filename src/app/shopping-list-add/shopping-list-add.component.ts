@@ -42,6 +42,7 @@ export class ShoppingListAddComponent implements OnInit, OnDestroy {
   //recieving value of NgForm type from the view template
 
   onSubmit( form: NgForm) {
+
       const value = form.value;
       const ingredient= new Ingredient(value.name, value.amount);
 
@@ -50,7 +51,10 @@ export class ShoppingListAddComponent implements OnInit, OnDestroy {
       }else {
         this.sls.addItem(ingredient);
       }
-      
+
+      this.editedMode = false;
+
+      //form.reset();
   }
   ngOnDestroy() {
     this.subscription.unsubscribe();
