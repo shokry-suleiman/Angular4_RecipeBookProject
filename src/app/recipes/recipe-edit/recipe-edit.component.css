@@ -1,0 +1,10 @@
+
+/*
+Input Field which have  been  invalid or touched would  have been had border
+of color red .
+*/
+input.ng-invalid.ng-touched,
+textarea .ng-invalid .ng-touched
+{
+   border: 1px solid red;
+}
