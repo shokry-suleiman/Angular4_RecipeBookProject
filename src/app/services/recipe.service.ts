@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Recipe } from '../recipe';
 import {Ingredient} from "../classes/ingredient";
+import {Subject} from "rxjs";
 
 @Injectable()
 
 export class RecipeService {
 
+  changedRecipe = new Subject<Recipe[]>();
   private  recipes: Array<Recipe> = [
     new Recipe('Tasty Schnitzel','A super-tasty Schnitzel - just awesome!','https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG',[
       new Ingredient('French Fries',2),
@@ -22,11 +24,25 @@ export class RecipeService {
   constructor() { }
 
 getRecipe(){
+
     return this.recipes;
 }
 
 getRecipes( index: number ) {
+
   return this.recipes[index];
+}
+
+addRecipe(recipe: Recipe){
+
+  this.recipes.push(recipe);
+  this.changedRecipe.next(this.recipes.slice());
+}
+
+updateRecipe(index: number, recipe: Recipe){
+
+  this.recipes[index] = recipe;
+  this.changedRecipe.next(this.recipes.slice());
 }
 }
 
