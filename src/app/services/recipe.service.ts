@@ -44,6 +44,13 @@ updateRecipe(index: number, recipe: Recipe){
   this.recipes[index] = recipe;
   this.changedRecipe.next(this.recipes.slice());
 }
+
+deleteRecipe(index: number) {
+  this.recipes.splice(index, 1);
+  this.changedRecipe.next(this.recipes.slice());
+}
+
+
 }
 
 export const RECIPE_SERVICE: Array<any> = [
