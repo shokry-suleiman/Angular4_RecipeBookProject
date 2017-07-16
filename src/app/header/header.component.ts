@@ -8,12 +8,13 @@ import {Response} from "@angular/http";
 })
 export class HeaderComponent implements OnInit {
 
-  constructor( private dataSotrageService: DataStorageService ) { }
+  constructor(private dataSotrageService: DataStorageService) {
+  }
 
   ngOnInit() {
   }
 
-  onSave(){
+  onSave() {
     this.dataSotrageService.storeRecipes().subscribe(
       (response: Response) => {
         console.log(response.json());
@@ -21,14 +22,7 @@ export class HeaderComponent implements OnInit {
     )
   }
 
-  onFetch(){
-    this.dataSotrageService.getRecipes().subscribe(
-      (data)=>{
-        console.log(data);
-      },
-      (error)=>{
-
-        console.log(error);
-      });
+  onFetch() {
+    this.dataSotrageService.getRecipes();
   }
 }

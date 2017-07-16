@@ -49,7 +49,10 @@ deleteRecipe(index: number) {
   this.recipes.splice(index, 1);
   this.changedRecipe.next(this.recipes.slice());
 }
-
+setRecipes(recipes: Recipe[]) {
+  this.recipes = recipes;
+  this.changedRecipe.next(this.recipes.slice());
+}
 
 }
 
