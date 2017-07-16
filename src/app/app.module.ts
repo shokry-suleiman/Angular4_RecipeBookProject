@@ -17,6 +17,7 @@ import {SHOPPING_LIST} from "./services/shopping-list.service";
 import {AppRoutingModule} from "./app-routing.module";
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import {DataStorage_Service} from "./services/data-storage.service";
 
 
 
@@ -43,7 +44,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 
   ],
   providers: [ RECIPE_SERVICE,
-  SHOPPING_LIST],
+  SHOPPING_LIST, DataStorage_Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
