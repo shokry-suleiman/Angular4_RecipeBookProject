@@ -20,7 +20,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import {DataStorage_Service} from "./services/data-storage.service";
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
-
+import { AUTH_SERVICE } from './auth/auth.service';
 
 
 @NgModule({
@@ -48,7 +48,7 @@ import { SigninComponent } from './auth/signin/signin.component';
 
   ],
   providers: [ RECIPE_SERVICE,
-  SHOPPING_LIST, DataStorage_Service],
+  SHOPPING_LIST, DataStorage_Service,  AUTH_SERVICE ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
