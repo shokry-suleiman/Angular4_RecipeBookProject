@@ -30,7 +30,7 @@ __decorate([
 RecipeListComponent = __decorate([
     core_1.Component({
         selector: 'app-recipe-list',
-        templateUrl: './recipe-list.component.html'
+        templateUrl: 'recipe-list.component.html'
     })
 ], RecipeListComponent);
 exports.RecipeListComponent = RecipeListComponent;

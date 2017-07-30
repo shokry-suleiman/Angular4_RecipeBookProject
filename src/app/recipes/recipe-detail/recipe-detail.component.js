@@ -7,20 +7,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var RecipeItemComponent = (function () {
-    function RecipeItemComponent() {
+var RecipeDetailComponent = (function () {
+    function RecipeDetailComponent() {
     }
-    RecipeItemComponent.prototype.ngOnInit = function () {
+    RecipeDetailComponent.prototype.ngOnInit = function () {
     };
-    return RecipeItemComponent;
+    return RecipeDetailComponent;
 }());
 __decorate([
     core_1.Input()
-], RecipeItemComponent.prototype, "recipe", void 0);
-RecipeItemComponent = __decorate([
+], RecipeDetailComponent.prototype, "selectedRecipe", void 0);
+RecipeDetailComponent = __decorate([
     core_1.Component({
-        selector: 'app-recipe-item',
-        templateUrl: './recipe-item.component.html'
+        selector: 'app-recipe-detail',
+        templateUrl: 'recipe-detail.component.html'
     })
-], RecipeItemComponent);
-exports.RecipeItemComponent = RecipeItemComponent;
+], RecipeDetailComponent);
+exports.RecipeDetailComponent = RecipeDetailComponent;

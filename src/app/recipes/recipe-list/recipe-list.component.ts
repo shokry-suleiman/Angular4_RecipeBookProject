@@ -5,7 +5,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {Subscription} from "rxjs";
 @Component({
   selector: 'app-recipe-list',
-  templateUrl: './recipe-list.component.html'
+  templateUrl: 'recipe-list.component.html'
 
 })
 export class RecipeListComponent implements OnInit, OnDestroy {

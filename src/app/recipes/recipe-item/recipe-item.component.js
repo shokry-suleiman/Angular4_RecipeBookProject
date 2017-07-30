@@ -7,17 +7,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var ShoppingListAddComponent = (function () {
-    function ShoppingListAddComponent() {
+var RecipeItemComponent = (function () {
+    function RecipeItemComponent() {
     }
-    ShoppingListAddComponent.prototype.ngOnInit = function () {
+    RecipeItemComponent.prototype.ngOnInit = function () {
     };
-    return ShoppingListAddComponent;
+    return RecipeItemComponent;
 }());
-ShoppingListAddComponent = __decorate([
+__decorate([
+    core_1.Input()
+], RecipeItemComponent.prototype, "recipe", void 0);
+RecipeItemComponent = __decorate([
     core_1.Component({
-        selector: 'app-shopping-list-add',
-        templateUrl: './shopping-list-add.component.html'
+        selector: 'app-recipe-item',
+        templateUrl: 'recipe-item.component.html'
     })
-], ShoppingListAddComponent);
-exports.ShoppingListAddComponent = ShoppingListAddComponent;
+], RecipeItemComponent);
+exports.RecipeItemComponent = RecipeItemComponent;
