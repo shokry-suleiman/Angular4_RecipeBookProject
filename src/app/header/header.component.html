@@ -20,6 +20,7 @@
           <li ><a [routerLink]="['/signup']">Register</a></li>
         </ng-template>
 
+        <li><a style="cursor: pointer;" (click)="onLogOut()" *ngIf="this.authService.isAuthenticated()">Logout</a></li>
         <ng-template [ngIf]="isAuthenticated()">
         <li class="dropdown" appDropdown>
           <a style="cursor: pointer;" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
@@ -29,6 +30,7 @@
           </ul>
         </li>
         </ng-template>
+
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
