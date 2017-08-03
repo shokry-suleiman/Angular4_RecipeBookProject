@@ -5,18 +5,16 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { ShoppingListAddComponent } from './shopping-list/shopping-list-add/shopping-list-add.component';
 import {RECIPE_SERVICE} from "./services/recipe.service";
 import {SHOPPING_LIST} from "./services/shopping-list.service";
 import {AppRoutingModule} from "./app-routing.module";
 import {DataStorage_Service} from "./services/data-storage.service";
-import { SignupComponent } from './auth/signup/signup.component';
-import { SigninComponent } from './auth/signin/signin.component';
 import { AUTH_SERVICE } from './auth/auth.service';
 import {AUTH_GUARD_SERVICE} from "./auth/auth-guard.service";
 import {RecipesModule} from "./recipes/recipes.module";
 import {SharedModule} from "./shared/shared.module";
+import {ShoppingListModule} from "./shopping-list/shopping-list/shopping-list.module";
+import {AuthModule} from "./auth/auth.module";
 
 
 
@@ -24,10 +22,6 @@ import {SharedModule} from "./shared/shared.module";
   declarations: [
     AppComponent,
     HeaderComponent,
-    ShoppingListComponent,
-    ShoppingListAddComponent,
-    SignupComponent,
-    SigninComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +29,8 @@ import {SharedModule} from "./shared/shared.module";
     HttpModule,
     AppRoutingModule,
     RecipesModule,
+    ShoppingListModule,
+    AuthModule,
     SharedModule
   ],
   providers: [ RECIPE_SERVICE,
