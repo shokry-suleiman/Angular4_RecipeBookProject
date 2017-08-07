@@ -10,7 +10,7 @@ import {AuthGuardService} from "../auth/auth-guard.service";
 
 const recipesRoutes: Routes = [
 
-  { path: 'recipes', component: RecipesComponent, children: [
+  { path: '', component: RecipesComponent, children: [
     { path:'', component: RecipeStartComponent },
     //come before path: ':id' where Angular determine that is not dynamic
     // path

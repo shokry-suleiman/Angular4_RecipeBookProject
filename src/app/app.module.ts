@@ -11,10 +11,10 @@ import {AppRoutingModule} from "./app-routing.module";
 import {DataStorage_Service} from "./services/data-storage.service";
 import { AUTH_SERVICE } from './auth/auth.service';
 import {AUTH_GUARD_SERVICE} from "./auth/auth-guard.service";
-import {RecipesModule} from "./recipes/recipes.module";
 import {SharedModule} from "./shared/shared.module";
 import {ShoppingListModule} from "./shopping-list/shopping-list/shopping-list.module";
 import {AuthModule} from "./auth/auth.module";
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -22,14 +22,14 @@ import {AuthModule} from "./auth/auth.module";
   declarations: [
     AppComponent,
     HeaderComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule,
-    RecipesModule,
     ShoppingListModule,
+    AppRoutingModule,
     AuthModule,
     SharedModule
   ],
