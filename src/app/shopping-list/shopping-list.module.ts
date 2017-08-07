@@ -7,16 +7,19 @@ import {ShoppingListRoutingModule} from "./shopping-list-routing.module";
 import {FormsModule} from "@angular/forms";
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    ShoppingListRoutingModule,
-    SharedModule
-  ],
+
   declarations: [
     ShoppingListComponent,
     ShoppingListAddComponent
 
-]
+  ],
+
+  imports: [
+    CommonModule,
+    FormsModule,
+    SharedModule,
+    ShoppingListRoutingModule
+  ]
+
 })
 export class ShoppingListModule { }
