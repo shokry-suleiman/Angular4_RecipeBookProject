@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { DropdownDirective } from '../directives/dropdown.directive';
-import {DataStorageService} from "../services/data-storage.service";
+
+import { DropdownDirective } from '../../directives/dropdown.directive';
+import {DataStorageService} from "../../services/data-storage.service";
 import {Response} from "@angular/http";
-import {AuthService} from "../auth/auth.service";
+import {AuthService} from "../../auth/auth.service";
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html'
+  templateUrl: 'header.component.html'
 })
 export class HeaderComponent implements OnInit {
 

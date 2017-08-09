@@ -4,7 +4,6 @@ import {FormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import {RECIPE_SERVICE} from "./services/recipe.service";
 import {SHOPPING_LIST} from "./services/shopping-list.service";
 import {AppRoutingModule} from "./app-routing.module";
@@ -14,15 +13,15 @@ import {AUTH_GUARD_SERVICE} from "./auth/auth-guard.service";
 import {SharedModule} from "./shared/shared.module";
 import {ShoppingListModule} from "./shopping-list/shopping-list/shopping-list.module";
 import {AuthModule} from "./auth/auth.module";
-import { HomeComponent } from './home/home.component';
+import {CoreModule} from "./core/core.module";
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    HomeComponent,
+    //That's Good When MY AppModule Contain Only The AppComponent That I use
+    //THe featureModule.............
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +30,8 @@ import { HomeComponent } from './home/home.component';
     ShoppingListModule,
     AppRoutingModule,
     AuthModule,
-    SharedModule
+    SharedModule,
+    CoreModule
   ],
   providers: [ RECIPE_SERVICE,
   SHOPPING_LIST, DataStorage_Service,  AUTH_SERVICE, AUTH_GUARD_SERVICE ],
